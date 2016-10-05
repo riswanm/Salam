@@ -1,0 +1,59 @@
+﻿<html ng-app="townApp">
+<head>
+    <!-- SCROLLS -->
+    <!-- load bootstrap and fontawesome via CDN -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <link rel="stylesheet" href="Content/bootstrap.min.css" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <!-- SPELLS -->
+    <!-- load angular and angular route via CDN -->
+    <link href="Content/theme/default.css" rel="stylesheet" />
+</head>
+<body ng-controller="mainController">
+
+    <!-- HEADER AND NAVBAR -->
+    <section id="logo-section" class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="#">
+                        <div class="logo text-center">
+                            <h1>elevator</h1>
+                            <span>Metro UI Bootstrap Template</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+    <div id="main">
+
+        <div ng-view>
+
+        </div>
+
+    </div>
+
+    <div class="copyright text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div>Design &amp; Developed by <a href="http://www.graygrids.com" target="_blank">GrayGrids</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="app/main.js"></script>
+    <script src="app/services/entityDataService.js"></script>
+    <script src="app/controllers/entityDataController.js"></script>
+
+
+
+</body>
+</html>

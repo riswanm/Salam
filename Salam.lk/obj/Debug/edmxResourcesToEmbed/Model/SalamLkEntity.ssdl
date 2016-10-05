@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SLMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DataField">
+    <Key>
+      <PropertyRef Name="DataFieldID" />
+      <PropertyRef Name="EntityTypeID" />
+    </Key>
+    <Property Name="DataFieldID" Type="int" Nullable="false" />
+    <Property Name="EntityTypeID" Type="int" Nullable="false" />
+    <Property Name="DataFieldName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DataTypeID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Entity">
+    <Key>
+      <PropertyRef Name="EntityID" />
+    </Key>
+    <Property Name="EntityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EntityTypeID" Type="int" Nullable="false" />
+    <Property Name="EntityName" Type="nvarchar" MaxLength="500" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="Data" Type="nvarchar(max)" />
+  </EntityType>
+  <Function Name="searchEntity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="SLMModelStoreContainer">
+    <EntitySet Name="DataField" EntityType="Self.DataField" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Entity" EntityType="Self.Entity" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

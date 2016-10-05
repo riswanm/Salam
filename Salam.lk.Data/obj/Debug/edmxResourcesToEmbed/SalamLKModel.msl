@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SLMModelStoreContainer" CdmEntityContainer="SLMEntities">
+    <EntitySetMapping Name="Bayans">
+      <EntityTypeMapping TypeName="SLMModel.Bayan">
+        <MappingFragment StoreEntitySet="Bayan">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Place" ColumnName="Place" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Speakers" ColumnName="Speakers" />
+          <ScalarProperty Name="Organizers" ColumnName="Organizers" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

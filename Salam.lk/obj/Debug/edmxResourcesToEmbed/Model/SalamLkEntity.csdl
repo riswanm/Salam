@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SLMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="SLMEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DataFields" EntityType="SLMModel.DataField" />
+    <EntitySet Name="Entities" EntityType="SLMModel.Entity" />
+    <FunctionImport Name="searchEntity" ReturnType="Collection(SLMModel.searchEntity_Result)" />
+  </EntityContainer>
+  <EntityType Name="DataField">
+    <Key>
+      <PropertyRef Name="DataFieldID" />
+      <PropertyRef Name="EntityTypeID" />
+    </Key>
+    <Property Name="DataFieldID" Type="Int32" Nullable="false" />
+    <Property Name="DataFieldName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EntityTypeID" Type="Int32" Nullable="false" />
+    <Property Name="DataTypeID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Entity">
+    <Key>
+      <PropertyRef Name="EntityID" />
+    </Key>
+    <Property Name="EntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntityTypeID" Type="Int32" Nullable="false" />
+    <Property Name="EntityName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Data" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="searchEntity_Result">
+    <Property Type="Int32" Name="EntityID" Nullable="false" />
+    <Property Type="Int32" Name="EntityTypeID" Nullable="false" />
+    <Property Type="Int32" Name="EntityDataID" Nullable="true" />
+    <Property Type="Int32" Name="DataFieldID" Nullable="true" />
+    <Property Type="String" Name="DataFieldValue" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="EntityName" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="DataFieldName" Nullable="false" MaxLength="100" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,62 @@
+﻿<div class="mainbody-section text-center">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="input-group">
+                <input class="form-control input-lg" placeholder="Enter your search text here..." type="text" ng-model="searchText">
+                <span class="input-group-btn search-btn"><button class="btn btn-lg btn-primary" type="button" ng-click="startSearch()">Search</button></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="row jscroll" id="list-deals">
+                    <div class="jscroll-inner">
+
+                        <div class="col-xs-12 deal-list-view" ng-repeat="item in models">
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <div class="row-fluid">
+                                        <div class="col-xs-12">
+                                            <h4 class="list-title"><a><strong>{{item.EntityName}} </strong></a></h4><br>
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid">
+                                        <div class="col-md-7 col-xs-12">
+                                            <div style="position:relative">
+                                                <a href=""><img class="img-responsive" src="DataImages/{{item.EntityID}}.{{item.MainImageType}}"></a>
+                                                
+                                            </div>
+                                          
+                                        </div>
+                                        <div class="col-md-5 col-xs-12 text-center">
+
+
+                                            <div class="row deal-prices" ng-repeat="data in item.EntityData">
+                                                <div class="col-xs-1 hidden-xs"><i class="fa fa-check"></i></div>
+                                                <div class="col-xs-11">
+
+                                                    <h5 class="text-amex">{{data.FieldName}} &nbsp;:&nbsp;  <strong> {{data.DataFieldValue}}</strong></h5>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                                     
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<a class="scroll-next" href="https://mydeal.lk/deals/list/index/2"></a>-->
+                        <div class="col-xs-12 text-center">
+                            <button class="btn btn-primary btn-sm scroll-next" ng-click="loadMore()" ng-disabled="pageSize > models.length"><i class="fa fa-chevron-right"></i> Click here to see more results</button>
+                            <p class="lead"></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

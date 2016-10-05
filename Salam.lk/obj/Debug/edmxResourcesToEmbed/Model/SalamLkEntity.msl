@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SLMModelStoreContainer" CdmEntityContainer="SLMEntities">
+    <EntitySetMapping Name="DataFields">
+      <EntityTypeMapping TypeName="SLMModel.DataField">
+        <MappingFragment StoreEntitySet="DataField">
+          <ScalarProperty Name="DataTypeID" ColumnName="DataTypeID" />
+          <ScalarProperty Name="EntityTypeID" ColumnName="EntityTypeID" />
+          <ScalarProperty Name="DataFieldName" ColumnName="DataFieldName" />
+          <ScalarProperty Name="DataFieldID" ColumnName="DataFieldID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Entities">
+      <EntityTypeMapping TypeName="SLMModel.Entity">
+        <MappingFragment StoreEntitySet="Entity">
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="EntityName" ColumnName="EntityName" />
+          <ScalarProperty Name="EntityTypeID" ColumnName="EntityTypeID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="EntityID" ColumnName="EntityID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="searchEntity" FunctionName="SLMModel.Store.searchEntity">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SLMModel.searchEntity_Result">
+          <ScalarProperty Name="EntityID" ColumnName="EntityID" />
+          <ScalarProperty Name="EntityTypeID" ColumnName="EntityTypeID" />
+          <ScalarProperty Name="EntityDataID" ColumnName="EntityDataID" />
+          <ScalarProperty Name="DataFieldID" ColumnName="DataFieldID" />
+          <ScalarProperty Name="DataFieldValue" ColumnName="DataFieldValue" />
+          <ScalarProperty Name="EntityName" ColumnName="EntityName" />
+          <ScalarProperty Name="DataFieldName" ColumnName="DataFieldName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

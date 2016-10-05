@@ -1,0 +1,10 @@
+E:\codes\Salam\Salam.lk\Salam.lk.Data\bin\Debug\Salam.lk.Data.dll.config
+E:\codes\Salam\Salam.lk\Salam.lk.Data\bin\Debug\Salam.lk.Data.dll
+E:\codes\Salam\Salam.lk\Salam.lk.Data\bin\Debug\Salam.lk.Data.pdb
+E:\codes\Salam\Salam.lk\Salam.lk.Data\bin\Debug\EntityFramework.dll
+E:\codes\Salam\Salam.lk\Salam.lk.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\codes\Salam\Salam.lk\Salam.lk.Data\bin\Debug\EntityFramework.xml
+E:\codes\Salam\Salam.lk\Salam.lk.Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\codes\Salam\Salam.lk\Salam.lk.Data\obj\Debug\Salam.lk.Data.csprojResolveAssemblyReference.cache
+E:\codes\Salam\Salam.lk\Salam.lk.Data\obj\Debug\Salam.lk.Data.dll
+E:\codes\Salam\Salam.lk\Salam.lk.Data\obj\Debug\Salam.lk.Data.pdb
